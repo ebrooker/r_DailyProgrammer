@@ -114,28 +114,12 @@ class VigenereCipher:
 if __name__ == '__main__':
 
 
-    text = "Look, having nuclear - my uncle was a great professor and scientist and engineer, \n\
-Dr. John Trump at MIT; good genes, very good genes, OK, very smart, the Wharton \n\
-School of Finance, very good, very smart - you know, if you\'re a conservative \n\
-Republican, if I were a liberal, if, like, OK, if I ran as a liberal Democrat, they \n\
-would say I\'m one of the smartest people anywhere in the world - it\'s true! - but \n\
-when you\'re a conservative Republican they try - oh, do they do a number - that\'s why\n\
-I always start off: Went to Wharton, was a good student, went there, went there, did\n\
-this, built a fortune - you know I have to give my like credentials all the time, \n\
-because we\'re a little disadvantaged - but you look at the nuclear deal, the thing \n\
-that really bothers me - it would have been so easy, and it\'s not as important as \n\
-these lives are - nuclear is so powerful; my uncle explained that to me many, many \n\
-years ago, the power and that was 35 years ago; he would explain the power of what\'s \n\
-going to happen and he was right, who would have thought? - but when you look at \n\
-what\'s going on with the four prisoners - now it used to be three, now it\'s four - but\n\
-when it was three and even now, I would have said it\'s all in the messenger; fellas, \n\
-and it is fellas because, you know, they don\'t, they haven\'t figured that the women are\n\
-smarter right now than the men, so, you know, it\'s gonna take them about another 150 \n\
-years - but the Persians are great negotiators, the Iranians are great negotiators, so, \n\
-and they, they just killed, they just killed us, this is horrible."
+    text = "That though the radiance which was once so bright be now forever taken from my sight. \n\
+    Though nothing can bring back the hour of splendor in the grass, glory in the flower. We will \n\
+    grieve not, rather find strength in what remains behind."
 
 
-    cipher = VigenereCipher(key="covfefe")
+    cipher = VigenereCipher(key="calorie")
     cipher.encrypt(text)
     cipher.decrypt()
     cipher.print_info()
