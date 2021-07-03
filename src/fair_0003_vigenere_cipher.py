@@ -2,6 +2,8 @@
 Ezra S. Brooker
 Date Created: 2021-07-01
 
+https://www.reddit.com/r/dailyprogrammer/comments/pkwb1/2112012_challenge_3_intermediate/
+
 Welcome to cipher day!
 
 Create a program that can take a piece of text and encrypt it with an alphabetical

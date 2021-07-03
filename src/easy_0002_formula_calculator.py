@@ -2,6 +2,8 @@
 Ezra S. Brooker
 Date Created: 2021-07-01
 
+https://www.reddit.com/r/dailyprogrammer/comments/pjbj8/easy_challenge_2/
+
 Hello, coders! An important part of programming is being able to apply 
 your programs, so your challenge for today is to create a calculator 
 application that has use in your life. It might be an interest calculator, 

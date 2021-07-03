@@ -2,6 +2,8 @@
 Ezra S. Brooker
 Date Created: 2021-07-01
 
+https://www.reddit.com/r/dailyprogrammer/comments/pkw2m/2112012_challenge_3_easy/
+
 Welcome to cipher day!
 
 Write a program that can encrypt texts with an alphabetical caesar cipher. 

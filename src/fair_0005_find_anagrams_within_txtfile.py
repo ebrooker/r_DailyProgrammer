@@ -2,6 +2,8 @@
 Ezra S. Brooker
 Date Created: 2021-07-03
 
+https://www.reddit.com/r/dailyprogrammer/comments/pnhtj/2132012_challenge_5_intermediate/
+
 Your challenge today is to write a program that can find the number of 
 anagrams within a .txt file. 
 

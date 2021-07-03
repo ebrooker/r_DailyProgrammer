@@ -2,6 +2,8 @@
 Ezra S. Brooker
 Date Created: 2021-07-02
 
+https://www.reddit.com/r/dailyprogrammer/comments/pkwgf/2112012_challenge_3_difficult/
+
 Welcome to cipher day!
 
 For this challenge, you need to write a program that will take the scrambled words from this post, 
