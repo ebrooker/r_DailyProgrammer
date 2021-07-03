@@ -4,3 +4,4 @@
 **/build
 **/templates
 **/logs
+**/__pycache__
