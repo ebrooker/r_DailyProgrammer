@@ -58,23 +58,23 @@ class EquiTriangle:
 
 class Sierpinksi:
 
-    def __init__(self, main_triangle=EquiTriangle(), max_levels=3):
-        self.max_levels = max_levels
-        self.triangles = { i : [] for i in range(self.max_levels+1) }
+    def __init__(self, main_triangle=EquiTriangle(), max_level=3):
+        self.max_level = max_level
+        self.triangles = { i : [] for i in range(self.max_level+1) }
         self.triangles[0].append(main_triangle)
 
     def __build_set(self,):
         [[self.__build(tri,level) for tri in parent] for level, parent in self.triangles.items()]
 
     def __build(self,tri,level):
-        if level == self.max_levels: return
+        if level == self.max_level: return
         self.triangles[level+1].append(EquiTriangle(tri.leg_size*0.5, tri.vert_left,  vert='left'))
         self.triangles[level+1].append(EquiTriangle(tri.leg_size*0.5, tri.vert_right, vert='right'))
         self.triangles[level+1].append(EquiTriangle(tri.leg_size*0.5, tri.vert_top,   vert='top'))
 
     def draw(self, fig=None):
         self.__build_set()
-        dlen = sum(len(v) for v in self.triangles.values())
+        dlen = len(self.triangles[self.max_level])
         colors = cm.inferno_r(np.linspace(0,1,dlen))
         colors = colors[::-1]
 
@@ -82,11 +82,9 @@ class Sierpinksi:
             fig = plt.figure()
             fig.patch.set_facecolor('k')
 
-        j = 0
-        for k,v in self.triangles.items():
-            for i,tri in enumerate(v):
-                plt.fill(tri.xcoords, tri.ycoords, color=colors[j], alpha=0.2)
-                j+=1
+        for i,tri in enumerate(self.triangles[self.max_level]):
+            plt.fill(tri.xcoords, tri.ycoords, color=colors[i], alpha=0.2, zorder=1)
+
         plt.axis("off")
         return plt
 
@@ -169,7 +167,7 @@ class Barnsley:
         if fig is None:
             fig = plt.figure()
             fig.patch.set_facecolor('k')
-        plt.scatter(self.x*self.scale, self.y*self.scale, marker='o', s=0.01, c=self.z, cmap=cm.Greens_r)
+        plt.scatter(self.x*self.scale, self.y*self.scale, marker='o', s=0.01, c=self.z, cmap=cm.Greens_r, zorder=2)
         plt.axis('off')
         return plt
 
@@ -219,16 +217,14 @@ class Barnsley:
 if __name__ == '__main__':
 
     fig = plt.figure()
-    fig.patch.set_facecolor('k')    
+    fig.set_facecolor('k')    
 
     tri = EquiTriangle(vert_coords=(-0.5,0.0))
-    sie = Sierpinksi(main_triangle=tri, max_levels=7)
+    sie = Sierpinksi(main_triangle=tri, max_level=7)
     fig = sie.draw(fig=fig)
     
-
     bar = Barnsley(points=20000, scale=0.04)
     fig = bar.draw(fig=fig)
 
-    fig.show()
-    # fig.savefig("../images/fair_0007_recursives.pdf", dpi=1096)
-
+    # fig.show()
+    fig.savefig("../images/fair_0007_recursives.pdf", dpi=1096, facecolor='k')
