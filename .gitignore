@@ -6,3 +6,7 @@
 **/templates
 **/logs
 **/__pycache__
+*.exe
+*.mod
+*.o
+*.smod
